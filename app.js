@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
      
     apiCall.headers({
         "x-rapidapi-host": "ip-geolocation-ipwhois-io.p.rapidapi.com",
-        "x-rapidapi-key": "0d3883ce61msh33099b70a211636p177184jsn61c3afe16020"     
+        "x-rapidapi-key": "*"     
     });
      
     apiCall.end(function(result) {
