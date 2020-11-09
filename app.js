@@ -1,7 +1,7 @@
 const express = require('express')
 const unirest = require("unirest");
 const app = express()
-const port = 3000
+const port = 3000 || process.env.PORT
 
 app.get('/', (req, res) => {
     const apiCall = unirest(
