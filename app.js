@@ -1,7 +1,7 @@
 const express = require('express')
 const unirest = require("unirest");
 const app = express()
-const port = 3000 || process.env.PORT
+const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
     const apiCall = unirest(
@@ -17,8 +17,7 @@ app.get('/', (req, res) => {
     apiCall.end(function(result) {
         if (res.error) throw new Error(result.error);
         console.log(result.body);
-        res.send(result.body);
-     
+        res.send(result.body); 
     });
 })
 
